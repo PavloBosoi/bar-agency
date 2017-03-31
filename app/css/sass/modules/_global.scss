@@ -1,0 +1,89 @@
+/* ==|====================
+   Module/Global
+   ======================= */
+.g-section__space{
+    @include ptr(padding,80 0 180);
+}
+.g-section__blue {
+    position: relative;
+    background-color: $color1;
+}
+.g-section__blue::before{
+    content: '';
+    position: absolute;
+    top: -4%;
+    left: -5%;
+    width: 110%;
+    @include ptr(height,100);
+    background-color: $color1;
+    transform: rotate(2deg);
+    z-index: -1;
+}
+.g-section__white{
+    position: relative;
+}
+.g-section__white::before{
+    content: '';
+    position: absolute;
+    top: -6%;
+    left: -5%;
+    width: 110%;
+    @include ptr(height,100);
+    background-color: #fff;
+    transform: rotate(2deg);
+    z-index: -1;
+}
+/*===titles===*/
+.g-title-main{
+    text-align: center;
+    @include ptr(margin,0 0 80 0);
+    color: $color2;
+}
+.g-title-main h2{
+    font-family: $font2;
+    font-weight: 100;
+    @include fluidFontSize(22px,36px,480px,1024px,40px,29px);
+    text-transform: uppercase;
+}
+.g-title-main p{
+    font-family: $font2;
+    font-weight: 300;
+    @include fluidFontSize(14px,18px,480px,1024px,22px,16px);
+    @include ptr(margin,20 0 0 0);
+}
+
+.g-title-section{
+    position: relative;
+    text-align: center;
+    @include ptr(margin,0 40 20);
+    color: $color2;
+}
+.g-title-section h3{
+    font-family: $font2;
+    @include fluidFontSize(18px,22px,480px,1024px,26px,20px);
+}
+
+.g-title__white{
+    color: #fff;
+}
+
+.g-title-line{
+    width: 100%;
+    text-align: center;
+    @include ptr(margin,0 0 40 0);
+    font-family: $font3;
+    @include fluidFontSize(20px,30px,480px,1024px,34px,25px);
+    h3{
+        position: relative;
+        display: inline-block;
+        &::before{
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 1px;
+            background-color: #fff;
+        }
+    }
+}

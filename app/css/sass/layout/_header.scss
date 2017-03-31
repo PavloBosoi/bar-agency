@@ -1,0 +1,51 @@
+/* ==|====================
+   Layout/Header
+   ======================= */
+.header{
+    @include ptr(height,90);
+    @include ptr(padding,14 0 0);
+    position: relative;
+    & > .container{
+        position: relative;
+        height: 100%;
+    }
+}
+.menu{
+    text-align: right;
+    position: absolute;
+    bottom: 0;
+    @include ptr(right,15);
+    ul{
+        @extend %parent;
+    }
+    li{
+        @extend %child;
+        @extend %align-middle;
+        @include ptr(margin,0 0 0 85);
+        &:first-child{
+            margin: 0;
+        }
+        a{
+            @include ptr(height,45);
+            text-decoration: none;
+            display: block;
+            font-family: $font2;
+            @include fluidFontSize(12px,14px,480px,1200px,18px,13px);
+            position: relative;
+            &::before{
+                content: '';
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                width: 100%;
+                @include ptr(height,4);
+                background-color: $color2;
+                transform: scaleX(0);
+                transition: all .2s linear;
+            }
+            &:hover::before{
+                transform: scaleX(1);
+            }
+        }
+    }
+}
