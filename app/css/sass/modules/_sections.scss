@@ -1,6 +1,50 @@
 /* ==|====================
    Module/Sections
    ======================= */
+.slider{
+    position: relative;
+    .owl-nav{
+        position: absolute;
+        top: 0;
+        right: 100px;
+        height: 100%;
+        width: 100px;
+        & > div{
+            position: relative;
+            cursor: pointer;
+            width: 43px;
+            height: 43px;
+            border-radius: 50%;
+            border: 1px solid #fff;
+            .icon{
+                position: absolute;
+                top: 0;
+                left: 0;
+                bottom: 0;
+                right: 0;
+                margin: auto;
+            }
+        }
+    }
+}
+.slider-item{
+    @include ptr(height,578);
+    @include ptr(line-height,578);
+    color: #fff;
+}
+.slider-item-text{
+    @extend %align-middle;
+    width: 48.5%;
+    h2{
+        font-family: $font2;
+        @include fluidFontSize(26px,48px,480px,1200px,52px,32px);
+        text-transform: uppercase;
+    }
+    p{
+        @include ptr(margin,30 0 0 0);
+        @include fluidFontSize(14px,18px,480px,1200px,28px,16px);
+    }
+}
 
 .form-group{
     position: relative;

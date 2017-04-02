@@ -1,7 +1,7 @@
 /* ===========================
    Base
    =========================== */
-/*@import "sprite-build/sprite.css";*/
+@import "sprite-build/sprite.css";
 
 * {
     margin: 0;
@@ -73,7 +73,8 @@ img{
     max-width: 100%;
     height: auto;
 }
-section,footer{
-    position: relative;
-    z-index: 1;
+
+.icon {
+    display: inline-block;
+    background-repeat: no-repeat;
 }
