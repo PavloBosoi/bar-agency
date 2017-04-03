@@ -5,10 +5,10 @@
 /*===titles===*/
 .title-line{
     font-family: $font2;
-    @include fluidFontSize(18px,36px,480px,1200px,40px,24px);
+    @include fluidFontSize(22px,36px,480px,1200px,40px,26px);
     color: #333;
     @include ptr(margin,0 0 40 0);
-    @include ptr(padding,0 0 35 0);
+    @include ptr(padding,0 0 45 0);
     position: relative;
     &::before{
         content: '';
@@ -26,4 +26,9 @@
     @include fluidFontSize(14px,18px,480px,1200px,22px,16px);
     color: #fff;
     @include ptr(margin,0 0 15 0);
+}
+
+/*===spaces===*/
+.main-space{
+    @include ptr(margin,80 0 0 0);
 }

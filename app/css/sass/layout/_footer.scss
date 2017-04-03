@@ -45,14 +45,14 @@
 }
 
 .footer-copy{
-    @include ptr(margin,30 0 0 0);
+    @include ptr(margin,25 0 0 0);
     @include fluidFontSize(10px,12px,480px,1200px,24px,11px);
     a{
         display: inline-block;
         vertical-align: middle;
     }
 }
-.menu-footer{
+/*.menu-footer{
     text-align: center;
     ul{
         display: inline-block;
@@ -74,6 +74,15 @@
             }
         }
     }
+}*/
+
+
+.copyright-home,
+.copyright-mls{
+    text-align: center;
+}
+.copyright-mls{
+    @include ptr(margin,40 0 0 0);
 }
 
 .contacts-info{
@@ -82,7 +91,7 @@
         min-height: 22px;
         position: relative;
         &:first-child{
-            margin: 0;
+            @include ptr(margin,30 0 0 0);
             i{
                 margin: 0;
                 @include ptr(top,3);
@@ -96,7 +105,7 @@
         }
         i{
             position: absolute;
-            top: 0;
+            @include ptr(top,3);
             left: 0;
             bottom: 0;
             right: 0;

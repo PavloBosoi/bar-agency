@@ -21,17 +21,18 @@
     li{
         @extend %child;
         @extend %align-middle;
-        @include ptr(margin,0 0 0 85);
+        @include ptr(margin,0 0 0 88);
         &:first-child{
             margin: 0;
         }
         a{
-            @include ptr(height,45);
+            @include ptr(height,54);
             text-decoration: none;
             display: block;
             font-family: $font2;
-            @include fluidFontSize(12px,14px,480px,1200px,18px,13px);
+            @include fluidFontSize(14px,14px,480px,1200px,18px,14px);
             position: relative;
+            text-transform: uppercase;
             &::before{
                 content: '';
                 position: absolute;
