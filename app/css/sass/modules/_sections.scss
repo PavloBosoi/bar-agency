@@ -46,6 +46,23 @@
     }
 }
 
+.about-text{
+    p{
+        @include ptr(margin,25 0 0 0);
+        &:first-child{
+            margin: 0;
+        }
+    }
+}
+
+.houses{
+    overflow: hidden;
+}
+.houses-item{
+    float: left;
+    width: 33.3333%;
+}
+
 .form-group{
     position: relative;
 }

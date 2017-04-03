@@ -23,7 +23,13 @@ $(function () {
 
     /*=================Plagins===============*/
 
-    $('.owl-carousel').owlCarousel({
+    $('.owl-carousel').slick({
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        vertical: true
+    });
+
+/*    $('.owl-carousel').owlCarousel({
         items:1,
         mouseDrag: false,
         touchDrag: false,
@@ -50,17 +56,17 @@ $(function () {
                     $(this).addClass('active');
                     $(this).siblings().removeClass('active');
                 }
-                /*else if(item === 0){
+                else if(item === 0){
                     hashEl.last().addClass('active');
                     hashEl.last().siblings().removeClass('active');
-                }*/
+                }
                 else{
                     hashEl.eq(0).addClass('active');
                     hashEl.eq(0).siblings().removeClass('active');
                 }
             });
         }
-    });
+    });*/
 
 
 

@@ -9,5 +9,5 @@
     height: 100%;
 }
 .content {
-    padding: 0 0 100px;
+    @include ptr(padding,0 0 260 0);
 }
