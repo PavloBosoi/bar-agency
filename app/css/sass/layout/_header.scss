@@ -4,6 +4,8 @@
 .header{
     @include ptr(height,90);
     @include ptr(padding,14 0 0);
+    border-bottom: 1px solid #cfd8dc;
+    background-color: #fff;
     position: relative;
     & > .container{
         position: relative;
@@ -13,7 +15,7 @@
 .menu{
     text-align: right;
     position: absolute;
-    bottom: 0;
+    bottom: -1px;
     @include ptr(right,15);
     ul{
         @extend %parent;

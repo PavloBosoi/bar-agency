@@ -154,6 +154,135 @@
     width: 33.3333%;
 }
 
+
+
+
+
+/*===DEEP===*/
+.deep{
+    @include ptr(padding, 90 0 100 0);
+}
+.deep-left{
+    &::before{
+        content: '';
+        position: absolute;
+        top: -50%;
+        right: 15px;
+        height: 1000%;
+        width: 1000%;
+        background-color: #eceff1;
+        z-index: -1;
+    }
+}
+.deep-connect{
+    p{
+        span,a{
+            color: #333;
+        }
+        .icon-phone{
+            left: 4px;
+        }
+    }
+}
+
+/*---Agent---*/
+.agent{
+    @include ptr(padding,0 30 0 0);
+}
+.agent-name{
+    @include ptr(margin,15 0 0 0);
+    span{
+        font-family: $font2;
+        @include fluidFontSize(22px,36px,480px,1200px,40px,26px);
+        color: #333;
+    }
+    p{
+        @include ptr(margin,10 0 0 0);
+        font-family: $font2;
+        @include fluidFontSize(14px,14px,480px,1200px,18px,14px);
+        text-transform: uppercase;
+        color: $color3;
+        a{
+            color: $color3;
+            &:hover{
+                text-decoration: none;
+                color: $color2;
+            }
+        }
+    }
+}
+.agent-socials{
+    @include ptr(margin,25 0 0 0);
+    a{
+        width: 36px;
+        height: 36px;
+        line-height: 36px;
+        border: 1px solid $color3;
+        color: $color3;
+        display: inline-block;
+        border-radius: 50%;
+        text-align: center;
+        &:hover{
+            color: $color2;
+            border: 1px solid $color2;
+        }
+    }
+}
+.agent-text{
+    @include ptr(margin,40 0 35);
+}
+
+
+.agent-house{
+    @include ptr(margin,0 0 45 0);
+}
+.agent-house-img{
+    overflow: hidden;
+    img:hover{
+        transform: scale(1.1,1.1) rotate(-2deg);
+    }
+}
+.agent-house-status{
+    @include ptr(margin,20 0 0 0);
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    span{
+        font-family: $font2;
+        @include fluidFontSize(14px,16px,480px,1200px,20px,15px);
+        text-transform: uppercase;
+    }
+    .status{
+        color: #8bc34a;
+    }
+    .type{
+        color: $color3;
+    }
+    .price{
+        color: $color2;
+    }
+}
+
+.agent-house-map{
+    @include ptr(margin,25 0 0 0);
+    @include ptr(padding,0 0 0 30);
+    position: relative;
+    display: block;
+    font-weight: 600;
+    @include ptr(line-height,25);
+    i{
+        position: absolute;
+        @include ptr(top,3);
+        left: 0;
+    }
+}
+
+.agent-house-text{
+    @include ptr(margin,20 0 0 0);
+}
+
+
+
 .form-group{
     position: relative;
 }

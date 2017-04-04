@@ -5,50 +5,27 @@
 /*---btn-all---*/
 .btn-all{
 	position: relative;
-
 	display: block;
-	@include ptr(width,200);
-	@include ptr(height,40);
-	margin: 50px auto 0;
-	margin: 5rem auto 0;
+	@include ptr(width,170);
+	@include ptr(height,45);
+	margin: 55px auto 0;
+	margin: 5.5rem auto 0;
 	overflow: hidden;
-	@include ptr(font-size,16);
-	@include ptr(line-height,40);
+	font-family: $font2;
+	@include ptr(font-size,14);
+	@include ptr(line-height,45);
 	text-align: center;
 	color: #fff;
+	text-transform: uppercase;
 	text-decoration: none;
 	letter-spacing: normal;
-	font-family: $font2;
-
-	background-color: $color1;
+	background-color: $color2;
+	border: 1px solid $color2;
 	@include ptr(border-radius,25);
-}
-
-.btn-all span{
-	position: absolute;
-	top: 0;
-	@include ptr(left,-40);
-	@include ptr(width,40);
-	@include ptr(height,40);
-
-	@include ptr(font-size,18);
-	@include ptr(line-height,38);
-	color: $color1;
-
-	background-color: #fff;
-	border: 1px solid $color1;
-	@include ptr(border-radius,25);
-	transition: all 0.5s linear;
-}
-
-.btn-all:hover span{
-	left: 0;
-}
-
-.btn-all:hover{
-	@include ptr(padding,0 0 0 30);
-	color: #fff;
-	text-decoration: none;
+	&:hover{
+		background-color: transparent;
+		text-decoration: none;
+	}
 }
 
 .btn-all__white{

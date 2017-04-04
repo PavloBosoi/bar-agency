@@ -21,6 +21,22 @@
     }
 }
 
+.title-deep{
+    font-family: $font2;
+    @include fluidFontSize(22px,36px,480px,1200px,40px,26px);
+    color: #333;
+    @include ptr(margin,0 0 30 0);
+    position: relative;
+}
+
+.title-block{
+    font-family: $font2;
+    @include fluidFontSize(20px,28px,480px,1200px,32px,24px);
+    color: #333;
+    @include ptr(margin,0 0 25 0);
+    position: relative;
+}
+
 .title-footer{
     font-family: $font2;
     @include fluidFontSize(14px,18px,480px,1200px,22px,16px);

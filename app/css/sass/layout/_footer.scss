@@ -103,6 +103,10 @@
             color: #fff;
             @include fluidFontSize(12px,14px,480px,1200px,24px,13px);
         }
+        a:hover{
+            color: $color2;
+            text-decoration: none;
+        }
         i{
             position: absolute;
             @include ptr(top,3);
