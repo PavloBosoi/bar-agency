@@ -55,7 +55,8 @@
     .contacts-info p:first-child{
         margin: 0;
     }
-    .contacts-info p i{
+    .contacts-info p i,
+    .deep-connect p:first-child i{
         top: 0;
     }
     .footer{
@@ -102,13 +103,68 @@
         background-color: $color2;
         color: #fff;
     }
+    .agent{
+        text-align: center;
+        padding: 0;
+    }
+    .agent-listings{
+        @include ptr(margin,50 0 0 0);
+    }
+    .deep-left{
+        @include ptr(padding,0 15 50);
+    }
+    .deep-left::before {
+        top: auto;
+        bottom: 0;
+        right: 0;
+    }
+    .agent-socials a{
+        width: 30px;
+        height: 30px;
+        line-height: 30px;
+    }
+    .slider,
+    .slider .slider-item{
+        background-size: cover;
+        @include ptr(height,450);
+        @include ptr(line-height,450);
+    }
+    .slider-nav-el .nav-top{
+        @include ptr(top,20);
+    }
+    .slider-nav-el .nav-bot{
+        @include ptr(bottom,20);
+    }
+    .contacts-map iframe{
+        width: 58.3333%;
+    }
     html{
         font-size: 8px;
     }
 }
 
 @media only screen and (max-width: 639px) {
-
+    .full-width{
+        width: 100%;
+    }
+    .agent-listings{
+        text-align: center;
+    }
+    .agent-house-map{
+        text-align: left;
+    }
+    .agent-house-img{
+        display: inline-block;
+    }
+    .contacts-map{
+        @include ptr(margin,80 0 0 0);
+    }
+    .contacts-map iframe{
+        position: static;
+        padding: 0;
+        width: 100%;
+        @include ptr(height,500);
+    }
 }
 
 @media only screen and (max-width: 479px) {
@@ -126,7 +182,8 @@
         left: 50%;
         @include ptr(margin,0 0 0 -15);
     }
-    .about-text{
+    .about-text,
+    .agent-post{
         text-align: center;
     }
     .houses-item{
@@ -150,9 +207,6 @@
     .slider-item-text {
         width: 100%;
     }
-    .slider-nav{
-        position: relative;
-    }
     .slider-nav-el {
         top: auto;
         bottom: 0;
@@ -170,6 +224,24 @@
         top: 0;
         right: 15px;
         transform: rotateZ(-90deg);
+    }
+    .agent-post .agent-house-status .price{
+        position: static;
+    }
+    .slider,
+    .slider .slider-item{
+        background-size: cover;
+        @include ptr(height,300);
+        line-height: normal;
+    }
+    .slider-listing .slider-nav-el::before{
+        display: none;
+    }
+    .slider-item-text{
+        @include ptr(margin,10 0 0 0);
+    }
+    .contacts-map iframe{
+        @include ptr(height,400);
     }
     html{
         font-size: 7px;

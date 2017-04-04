@@ -10,6 +10,7 @@
     @include ptr(margin,0 0 40 0);
     @include ptr(padding,0 0 45 0);
     position: relative;
+    text-transform: capitalize;
     &::before{
         content: '';
         position: absolute;
@@ -25,8 +26,9 @@
     font-family: $font2;
     @include fluidFontSize(22px,36px,480px,1200px,40px,26px);
     color: #333;
-    @include ptr(margin,0 0 30 0);
+    @include ptr(margin,0 0 40 0);
     position: relative;
+    text-transform: capitalize;
 }
 
 .title-block{
@@ -35,6 +37,7 @@
     color: #333;
     @include ptr(margin,0 0 25 0);
     position: relative;
+    text-transform: capitalize;
 }
 
 .title-footer{
@@ -42,6 +45,7 @@
     @include fluidFontSize(14px,18px,480px,1200px,22px,16px);
     color: #fff;
     @include ptr(margin,0 0 15 0);
+    text-transform: capitalize;
 }
 
 /*===spaces===*/

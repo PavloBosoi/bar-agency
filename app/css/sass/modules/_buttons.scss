@@ -28,36 +28,23 @@
 	}
 }
 
-.btn-all__white{
-	color: $color1;
-	background-color: #fff;
-}
-
-.btn-all__white span{
-	color: #fff;
-
-	background-color: $color1;
-	border: 1px solid #fff;
-}
-
-.btn-all__white:hover{
-	color: $color1;
-}
-
 .btn-form{
-	@include ptr(margin,20 0 0 0);
-	float: right;
-	transition: all .5s linear;
+	@include ptr(width,170);
+	@include ptr(height,45);
+	margin: 0;
+	float: left;
+	@include ptr(border-radius,25);
 	font-family: $font2;
-}
-.btn-form input{
-	background-color: transparent;
-	border: none;
-	padding: 0;
+	background-color: $color2;
+	border: 1px solid $color2;
 	text-transform: uppercase;
 	color: #fff;
-	cursor: pointer;
-	font-family: $font2;
+	transition: $linear;
+	&:hover{
+		background-color: transparent;
+		text-decoration: none;
+		color: $color2;
+	}
 }
 
 
