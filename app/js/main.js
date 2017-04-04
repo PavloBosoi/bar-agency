@@ -25,6 +25,53 @@ $(function () {
     });
 
 
+    showAll($('.js-house'),$('.js-more'),2);
+
+    //show all item with more
+    function showAll(el,more,count){
+        loadMore(el,more,count);
+        setTimeout(function(){
+            showItem(el,count);
+            oneHeight(el);
+        },500);
+
+    }
+
+    //Alike height all item
+    function oneHeight(el){
+        var height = 0;
+        el.css('height','auto');
+        el.each(function(){
+            if($(this).outerHeight() > height){
+                height = $(this).outerHeight();
+            }
+        });
+        el.outerHeight(height);
+    }
+
+    //load more item
+    function loadMore(el,more,count){
+        more.on('click',function(e){
+            e.preventDefault();
+            count += count;
+            showItem(el,count);
+            oneHeight(el);
+            if(el.last().hasClass('show')){
+                more.hide(500);
+            }
+        });
+    }
+
+    //show specified number items
+    function showItem(el,count){
+        el.each(function(index){
+            if(index < count){
+                $(this).addClass('show');
+            }
+        });
+    }
+
+
 
     /*=================Plagins===============*/
     var sliderNav = $('.slider-nav-el');
@@ -146,7 +193,7 @@ $(function () {
     $(window).resize(function(){
         ScreenWidth = $(window).width();
         ScreenHeight = $(window).height();
-
+        showAll($('.js-house'),$('.js-more'),2);
 
     });
 

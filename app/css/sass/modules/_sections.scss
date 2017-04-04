@@ -360,6 +360,16 @@
     @include ptr(margin,20 0 0 0);
 }
 
+.js-house{
+    position: absolute;
+    opacity: 0;
+    transition: $linear;
+    &.show{
+        position: relative;
+        opacity: 1;
+    }
+}
+
 /*---Listing---*/
 .agent-post{
     @include ptr(margin,35 0 0 0);
@@ -385,7 +395,7 @@
     }
 }
 
-.agent-listings{
+.agent-single{
     @include ptr(padding,50 30 0 0);
 }
 

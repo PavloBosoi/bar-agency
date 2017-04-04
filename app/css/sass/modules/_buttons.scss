@@ -26,6 +26,10 @@
 		background-color: transparent;
 		text-decoration: none;
 	}
+	&:focus{
+		color: #fff;
+		text-decoration: none;
+	}
 }
 
 .btn-form{
