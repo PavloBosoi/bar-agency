@@ -33,6 +33,10 @@
     .footer-social a{
         @include ptr(width,145);
     }
+    .tags-form label,
+    .agents-item{
+        width: 33.3333%;
+    }
 }
 
 @media only screen and (max-width: 767px) {
@@ -162,6 +166,10 @@
         width: 100%;
         @include ptr(height,500);
     }
+    .tags-form label,
+    .agents-item{
+        width: 50%;
+    }
 }
 
 @media only screen and (max-width: 479px) {
@@ -180,7 +188,8 @@
         @include ptr(margin,0 0 0 -15);
     }
     .about-text,
-    .agent-post{
+    .agent-post,
+    .agents{
         text-align: center;
     }
     .houses-item{
@@ -239,6 +248,14 @@
     }
     .contacts-map iframe{
         @include ptr(height,400);
+    }
+    .tags-form label,
+    .agents-item{
+        width: 100%;
+    }
+    .agents-title::before{
+        left: 50%;
+        @include ptr(margin,0 0 0 -10);
     }
     html{
         font-size: 7px;

@@ -25,10 +25,19 @@
 	&:hover{
 		background-color: transparent;
 		text-decoration: none;
+		color: $color2;
 	}
 	&:focus{
 		color: #fff;
 		text-decoration: none;
+	}
+}
+.touch{
+	.btn-all{
+		&:hover{
+			background-color: $color2;
+			color: #fff
+		}
 	}
 }
 

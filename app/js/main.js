@@ -25,7 +25,13 @@ $(function () {
     });
 
 
-    showAll($('.js-house'),$('.js-more'),2);
+    /*showAll($('.js-ag-house'),$('.js-more'),2);
+    showAll($('.js-ls-house'),$('.js-more'),3);*/
+
+    oneHeight($('.more-item'));
+    $(document).on('click','.js-more',function(){
+        oneHeight($('.more-item'));
+    });
 
     //show all item with more
     function showAll(el,more,count){
@@ -57,7 +63,7 @@ $(function () {
             showItem(el,count);
             oneHeight(el);
             if(el.last().hasClass('show')){
-                more.hide(500);
+                more.fadeOut(500);
             }
         });
     }
@@ -84,6 +90,7 @@ $(function () {
         lazyLoad: true,
         draggable: false,
         easing: 'easeInOutBounce',
+        autoplay: true,
         dots: true,
         prevArrow: '<div class="nav-top"><span class="icon icon-nav-top"/></div>',
         nextArrow: '<div class="nav-bot"><span class="icon icon-nav-bottom"/></div>',
@@ -154,6 +161,40 @@ $(function () {
     });*/
 
 
+    //plugin fsort
+    /*$('.grid-item').fsort({
+        ppp: 2
+    });*/
+
+
+// initialize Masonry
+    var $container = $('.grid');
+
+    $container.multipleFilterMasonry({
+        itemSelector: '.grid-item',
+        filtersGroupSelector:'.filters'
+    });
+
+    checkValue();
+    function checkValue(){
+        var el = $('.filters input'),
+            elAll = '';
+        el.each(function(){
+            if($(this).val() == 'all'){
+                elAll = $(this);
+                elAll.siblings('.tag-btn').addClass('active');
+            }
+        });
+        el.on('click',function(){
+            if($(this).val() == 'all'){
+                el.prop('checked', false);
+                elAll.siblings('.tag-btn').addClass('active');
+            }
+            else{
+                elAll.siblings('.tag-btn').removeClass('active');
+            }
+        });
+    }
 
     /*=================Plagins===============*/
 
@@ -193,8 +234,9 @@ $(function () {
     $(window).resize(function(){
         ScreenWidth = $(window).width();
         ScreenHeight = $(window).height();
-        showAll($('.js-house'),$('.js-more'),2);
-
+        /*showAll($('.js-a-house'),$('.js-more'),2);
+        showAll($('.js-ls-house'),$('.js-more'),3);*/
+        oneHeight($('.more-item'));
     });
 
 });

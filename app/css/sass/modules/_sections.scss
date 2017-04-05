@@ -360,14 +360,18 @@
     @include ptr(margin,20 0 0 0);
 }
 
-.js-house{
+/*.more-item{
     position: absolute;
     opacity: 0;
     transition: $linear;
     &.show{
         position: relative;
         opacity: 1;
+        z-index: 2;
     }
+}*/
+.more-item{
+
 }
 
 /*---Listing---*/
@@ -428,7 +432,6 @@
     position: static;
 }
 
-
 .form-group{
     position: relative;
 }
@@ -436,7 +439,7 @@
     position: absolute;
     @include ptr(top,8);
     @include ptr(left,12);
-    @include fluidFontSize(12px,16px,480px,1024px,20px,14px);
+    @include fluidFontSize(12px,16px,480px,1200px,20px,14px);
     color: $color1;
     line-height: normal;
     transition: all .2s linear;
@@ -444,7 +447,7 @@
 .form-group.active label{
     @include ptr(top,-20);
     left: 0;
-    @include fluidFontSize(10px,14px,480px,1024px,18px,11px);
+    @include fluidFontSize(10px,14px,480px,1200px,18px,11px);
 }
 .not-error input,
 .not-error textarea{
@@ -460,7 +463,7 @@ div.wpcf7-validation-errors,
 }
 span.wpcf7-not-valid-tip {
     color: #f00;
-    @include fluidFontSize(12px,14px,480px,1024px,18px,13px);
+    @include fluidFontSize(12px,14px,480px,1200px,18px,13px);
     font-weight: normal;
     display: block;
     position: absolute;
@@ -475,7 +478,163 @@ span.wpcf7-not-valid-tip {
 .success-message{
     text-align: center;
     font-weight: bold;
-    @include fluidFontSize(14px,20px,480px,1024px,30px,16px);
+    @include fluidFontSize(14px,20px,480px,1200px,30px,16px);
     text-transform: uppercase;
     color: $color1;
+}
+
+/*---Agents---*/
+.agents{
+    @include ptr(padding,90 0 0 0);
+}
+.agents-filter{
+    @include ptr(margin,75 0 0 0);
+    .btn-all{
+        margin: 0 auto;
+    }
+}
+.tags-form{
+    display: flex;
+    flex-wrap: wrap;
+    @include ptr(margin,0 -15 70);
+    label{
+        width: 25%;
+        @include ptr(margin,8 0);
+        @include ptr(padding,0 15);
+        input{
+            position: absolute;
+            opacity: 0;
+            width: 1px;
+            height: 1px;
+        }
+        input[type=checkbox]:checked + .tag-btn{
+            color: $color2;
+        }
+        input[type=checkbox]:checked + .tag-btn::before{
+            transform: scaleX(1);
+        }
+    }
+}
+.tag-btn{
+    position: relative;
+    @include ptr(padding,0 0 5);
+    font-family: $font2;
+    @include fluidFontSize(14px,14px,480px,1200px,18px,14px);
+    color: $color3;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: $linear;
+    &:hover,
+    &.active{
+        color: $color2;
+    }
+    &::before{
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        @include ptr(height,4);
+        background-color: $color2;
+        transform: scaleX(0);
+        transition: all .2s linear;
+    }
+    &:hover::before,
+    &.active::before{
+        transform: scaleX(1);
+    }
+}
+.touch{
+    .tag-btn{
+        &:hover{
+            color: $color3;
+        }
+        &:hover::before{
+            transform: scaleX(0);
+        }
+        &.active{
+            color: $color2;
+        }
+        &.active::before{
+            transform: scaleX(1);
+        }
+    }
+}
+.more-link{
+    &.disabled{
+        opacity: .5;
+    }
+}
+
+.agents-grid{
+    @include ptr(margin,100 -15 0);
+}
+.agents-item{
+    width: 25%;
+    padding: 0 15px;
+    @include ptr(margin,0 0 100);
+    a{
+        display: block;
+        &:hover{
+            text-decoration: none;
+        }
+        &:hover .agents-icon{
+            background-color: $color2;
+        }
+        &:hover .agents-img::before{
+            opacity: 1;
+        }
+    }
+}
+.agents-img{
+    display: inline-block;
+    position: relative;
+    &::before{
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(247,148,30,.7);
+        border-radius: 50%;
+        opacity: 0;
+        transition: $linear;
+    }
+}
+.agents-icon{
+    width: 60px;
+    height: 60px;
+    position: absolute;
+    @include ptr(top,-2);
+    @include ptr(right,-10);
+    border-radius: 50%;
+    background-color: #06b35b;
+    transition: $linear;
+    i{
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        margin: auto;
+    }
+}
+.agents-title{
+    @include fluidFontSize(16px,24px,480px,1200px,28px,20px);
+    @include ptr(margin,35 0 0 0);
+    @include ptr(padding,0 0 15 0);
+    position: relative;
+    &::before{
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        @include ptr(width,20);
+        height: 1px;
+        background-color: $color2;
+    }
+}
+.agents-text{
+    @include ptr(margin,10 0 0 0);
 }
