@@ -501,11 +501,12 @@ span.wpcf7-not-valid-tip {
         width: 25%;
         @include ptr(margin,8 0);
         @include ptr(padding,0 15);
+        display: table;
         input{
-            position: absolute;
+            /*position: absolute;
             opacity: 0;
             width: 1px;
-            height: 1px;
+            height: 1px;*/
         }
         input[type=checkbox]:checked + .tag-btn{
             color: $color2;

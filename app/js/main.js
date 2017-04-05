@@ -187,7 +187,14 @@ $(function () {
         });
         el.on('click',function(){
             if($(this).val() == 'all'){
-                el.prop('checked', false);
+                /*el.filter(':checked').trigger('click');
+                el.prop('checked', false);*/
+                $(this).prop('checked', false);
+                el.each(function(){
+                    if($(this).is(':checked')){
+                        $(this).trigger('click');
+                    }
+                });
                 elAll.siblings('.tag-btn').addClass('active');
             }
             else{
