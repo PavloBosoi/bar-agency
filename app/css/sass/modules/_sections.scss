@@ -501,6 +501,7 @@ span.wpcf7-not-valid-tip {
         width: 25%;
         @include ptr(margin,8 0);
         @include ptr(padding,0 15);
+        display: table;
         input{
             position: absolute;
             opacity: 0;
